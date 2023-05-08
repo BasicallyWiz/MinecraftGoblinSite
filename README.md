@@ -22,6 +22,6 @@ Repo for the website of the Zombie Minecraft server, that we haven't actually go
 #### For more info on development, see [CONTRIBUTING](./CONTRIBUTING.md)
 
 ##  Got questions, or want more documentation?
-- [Look it up](http:)
+- [Look it up](https://www.youtube.com/watch?v=-Q08tftUJ30&t=10s)
 - [DM me on Discord](https://discord.com/users/324588568951390220)
 - [Micrososoft Learn is always handy](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-7.0)
