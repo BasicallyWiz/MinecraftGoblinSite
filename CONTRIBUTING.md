@@ -95,4 +95,65 @@ CallOfMinecraftWeb
 ...
 ```
 
+In this case, the likely namespace for both of these files would default to `ZMS.Client.Pages`.<br/>
+This means we can make our `PageName.razor` file look like this:
+```razor
+@page "/PageName"
+@namepsace ZMS.Client.Pages <!--Enforce the expected namespace if required-->
+
+<h1>Hey guys check out this cool page</h1>
+<p>It's got a cool script in it!</p>
+<p>It won't be in this file, though.</p>
+
+<!--by prefixing with @, we can foreach elements into our page.-->
+@foreach (string string in strings)
+{
+  <p>@string</p>
+}
+
+<!--demonstration of adding logic to an event-->
+<button @onclick="IncrementNumber">You've clicked me @number times</button>
+```
+And our `PageName.razor.cs` file will look like this:
+```csharp
+namespace ZMS.Client.Pages
+{
+  //  If this isn't partial, and isn't the same class as the .razor file, it won't work.
+  public partial class PageName
+  {
+    //  This is where we can put our script!
+    //  Wow how cool!
+
+    //  A list, that shows what I mean, but likely doesn't initialize properly.
+    List<string> strings = new List<string>() {"Wow,", "I", "sure love", "lists!"};
+
+    int number = 0;
+  }
+
+  public Async Task IncrementNumber()
+  {
+    number++;
+  }
+}
+```
+After having these two files made, rendered they form:
+```razor
+@page "/PageName"
+@namepsace ZMS.Client.Pages <!--Enforce the expected namespace if required-->
+
+<h1>Hey guys check out this cool page</h1>
+<p>It's got a cool script in it!</p>
+<p>It won't be in this file, though.</p>
+
+<!--by prefixing with @, we can foreach elements into our page.-->
+<p>Wow</P>
+<p>I</P>
+<p>sure love</P>
+<p>lists!</P>
+
+<!--demonstration of adding logic to an event-->
+<!--For this demonstration, I assume you've pressed the button 69 times-->
+<button @onclick="IncrementNumber">You've clicked me 69 times</button>
+```
+
 </details>
