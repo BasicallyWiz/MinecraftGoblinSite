@@ -25,3 +25,6 @@ Repo for the website of the Zombie Minecraft server, that we haven't actually go
 - [Look it up](https://www.youtube.com/watch?v=-Q08tftUJ30&t=10s)
 - [DM me on Discord](https://discord.com/users/324588568951390220)
 - [Micrososoft Learn is always handy](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-7.0)
+
+## Extra shit:
+![Very accurate portrayal of the website's planned design to the very last brilliant detail.](https://user-images.githubusercontent.com/48531736/239138908-a75bc3b8-437e-4d33-af05-ac177a0d6b2d.png)
