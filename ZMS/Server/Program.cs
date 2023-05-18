@@ -28,6 +28,7 @@ namespace ZMS
       }
 
       app.UseHttpsRedirection();
+      
 
       app.UseBlazorFrameworkFiles();
       app.UseStaticFiles();
