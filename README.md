@@ -1,4 +1,4 @@
-# Project ZMS (Zombie Minecraft [Web]Site)
+#UMG (Formerly ZMS)
 Repo for the website of the Zombie Minecraft server, that we haven't actually got a name for yet.
 
 ## First Steps
