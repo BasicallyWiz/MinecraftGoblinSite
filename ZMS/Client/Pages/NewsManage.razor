@@ -1,0 +1,16 @@
+﻿@page "/News/Manage"
+
+@if (IsLoggedIn == null)
+{
+  <h1>Authorising...</h1>
+  return;
+}
+else if (IsLoggedIn == false)
+{
+  <h1>You do not have access to this resource.</h1>
+  return;
+}
+
+<h1>Manage News</h1>
+
+<!--TODO: Complete a login system using discord IDs, I'm throwing away the idea to dynamically check a discord team, in favour of a server side file.-->

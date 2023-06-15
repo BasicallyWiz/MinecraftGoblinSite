@@ -4,7 +4,6 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>d3754b5a-cdc0-402d-8de2-e04918b9eeb9</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,11 +12,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Client\ZMS.Client.csproj" />
+    <ProjectReference Include="..\DiscordOAuthHelper\DiscordOAuthHelper.csproj" />
     <ProjectReference Include="..\Shared\ZMS.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Folder Include="News\Writers\" />
   </ItemGroup>
 
 

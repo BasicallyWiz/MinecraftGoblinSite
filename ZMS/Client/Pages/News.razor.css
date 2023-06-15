@@ -1,0 +1,79 @@
+﻿.title-bg
+{
+  position: relative;
+  display: flex;
+
+  width: 100vw;
+  height: 300px;
+
+  /*background-image: url(/images/juniper-landscape.jpeg);*/
+  background-size: cover;
+  background-position: center;
+}
+
+.title-img
+{
+  max-height: 90%;
+  max-width: 90%;
+  margin: auto;
+
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 1200px)
+{
+  .volumes
+  {
+    width: 1150px;
+    margin: 16px;
+    margin-top: 0px;
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  
+  .volumes > ::deep :first-child
+  {
+    grid-column: 1 / 4;
+    grid-row: 1;
+  } 
+}
+
+@media screen and (min-width: 850px) and (max-width: 1200px)
+{
+  .volumes
+  {
+    width: 800px;
+    margin: 16px;
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .volumes > ::deep :first-child
+  {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  } 
+}
+
+@media screen and (max-width: 850px)
+{
+  .volumes
+  {
+    width: min(calc(100% - (16px * 2)), 400px);
+    margin: 16px;
+  
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+  
+  .volumes >:first-child
+  {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  } 
+}

@@ -1,5 +1,3 @@
-
-
 img {
   position: absolute;
 }
@@ -7,18 +5,12 @@ img {
 .page {
   position: sticky;
   overflow: auto;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   width: 100vw;
-  backdrop-filter: blur(3px);
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    backdrop-filter: blur(3px) brightness(.7);
-  }
 }
 
 .navbar {

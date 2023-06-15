@@ -4,14 +4,18 @@ namespace ZMS
 {
   public class Program
   {
+    public static Dictionary<ulong, string> LoginKeys = new();
     public static void Main(string[] args)
     {
+      LoginKeys.Add(69696969, "442fecf6-2a31-4966-9279-a7875b454196");
       var builder = WebApplication.CreateBuilder(args);
 
       // Add services to the container.
 
       builder.Services.AddControllersWithViews();
       builder.Services.AddRazorPages();
+      builder.Services.AddHttpClient();
+      
 
       var app = builder.Build();
 
@@ -28,7 +32,6 @@ namespace ZMS
       }
 
       app.UseHttpsRedirection();
-      
 
       app.UseBlazorFrameworkFiles();
       app.UseStaticFiles();
@@ -39,6 +42,8 @@ namespace ZMS
       app.MapRazorPages();
       app.MapControllers();
       app.MapFallbackToFile("index.html");
+
+      ZMS.Server.Controllers.NewsController.SetupNewsController();
 
       app.Run();
     }

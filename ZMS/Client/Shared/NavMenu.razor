@@ -1,10 +1,43 @@
-﻿<div @attributes="@CapturedAttributes">
+﻿@inject NavigationManager NavMan
+
+<nav @attributes="@CapturedAttributes">
   <a href="/">
-    <img src="/images/tenkafuma-lulu-cat.gif">
+    <img src="/images/logo.png">
+    <h1 class="navbutton">Home</h1>
   </a>
-</div>
+  <a href="/Blog">
+    <h1 class="navbutton">Blog</h1>
+  </a>
+  <a onclick="navigator.clipboard.writeText('play.inocy.be');">
+    <h1 class="navbutton">play.inocy.be</h1>
+  </a>
+</nav>
 
 @code {
+  public string? PageTitle;
+  public string isHidden = "hidden";
+
   [Parameter(CaptureUnmatchedValues = true)]
   public Dictionary<string, object>? CapturedAttributes { get; set; }
+
+  protected override void OnInitialized()
+  {
+    PageTitle = NavMan.Uri.Split("/")[3];
+    NavMan.LocationChanged += OnLocationChanged;
+
+    if (NavMan.Uri.Split("/")[3] != "") isHidden = "";
+    else isHidden = "hidden";
+  }
+
+  async void OnLocationChanged(object? sender, LocationChangedEventArgs args)
+  {
+    await InvokeAsync(() =>
+    {
+      PageTitle = NavMan.Uri.Split("/")[3];
+
+      if (NavMan.Uri.Split("/")[3] != "") isHidden = "";
+      else isHidden = "hidden";
+      StateHasChanged();
+    });
+  }
 }

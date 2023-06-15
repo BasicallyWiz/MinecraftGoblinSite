@@ -1,18 +1,19 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 :root {
-  --train-line-thickness: 8px;
-  color: var(--font-color);
+  --element-shadow: 0 1.6px 3.6px .6px var(--shadow-color),0 .3px .9px 0 var(--shadow-color);
+   color: var(--font-color);
 }
 
 @media (prefers-color-scheme:dark)
 {
   :root
   {
-    --background-color: #1f1f1f;
-    --accent-one: #252526;
-    --accent-two: #383838;
+    --background-color: #333333;
+    --accent-one: #3a3a3a;
+    --accent-two: #454545;
     --font-color: white;
+    --shadow-color: #00000021;
   }
 }
 
@@ -24,18 +25,21 @@
     --accent-one: white;
     --accent-two: white;
     --font-color: black;
+    --shadow-color: #00000025;
   }
 }
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-image: url(https://i.redd.it/lc26hj4oh0j31.png);
+    background-color: var(--background-color);
     background-position: center; 
     background-size: cover;
     background-repeat: no-repeat;
 
     height: 100vh;
     width: 100vw;
+
+    overflow: hidden;
 }
 
 .valid.modified:not([type=checkbox]) {

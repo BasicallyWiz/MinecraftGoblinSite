@@ -1,0 +1,22 @@
+﻿@page "/News/View"
+@using ZMS.Client.Shared.News;
+
+<div class="issuecard" style="background-image: url(api/cdn?file=Media/@(Issue?.Thumbnail))">
+  <div>
+    <h1 class="issuetitle">@Issue?.Title</h1>
+  </div>
+</div>
+
+@foreach (ZMS.Shared.News.ArticleInfo article in Articles)
+{
+  <article>
+    @if (article.Thumbnail != null)
+    {
+      <img src="api/cdn?file=Media/@(article.Thumbnail)" class="articlethumb">
+    }
+    
+    @((MarkupString)Markdig.Markdown.ToHtml(article.Content))
+  </article>
+}
+
+<!--TODO: Complete a login system using discord IDs, I'm throwing away the idea to dynamically check a discord team, in favour of a server side file.-->

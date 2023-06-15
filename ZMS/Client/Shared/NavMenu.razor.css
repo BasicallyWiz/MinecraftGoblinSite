@@ -1,3 +1,5 @@
+
+
 .mynavbar {
   position: sticky;
   display: flex;
@@ -12,16 +14,44 @@
   padding-right: 1vw;
 
   background-color: var(--background-color);
+  box-shadow: var(--element-shadow);
+}
+.mynavbar >:hover {
+  background-color: var(--accent-one);
+}
+.mynavbar >:first-child h1 {
+  margin-left: 1rem;
+}
+.mynavbar >:last-child {
+  margin-left: auto;
 }
 
 a {
-  height: 90%;
+  display: flex;
+  height: 80%;
   width: fit-content;
+  padding: 0px .5rem;
+  margin: auto 0px;
+  margin-right: 1rem;
+
+  text-decoration: none;
+
+  border-radius: 4px;
+}
+
+a h1 {
+  margin: auto 0px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+h1 {
+  color: var(--font-color);
 }
 
 img {
-  height: 100%;
-  width: auto;
+  max-height: 100%;
+  max-width: 100%;
 
   border-radius: 4px;
 }
@@ -33,4 +63,25 @@ svg {
   height: fit-content;
 
   stroke-width: var(--train-line-thickness);
+}
+
+.divider
+{
+  height: 70%;
+  width: 2px;
+  margin: auto 1rem;
+  background-color: var(--font-color);
+}
+
+.hidden {
+  display: none;
+}
+
+.ip-button {
+  padding: 10px;
+  margin: auto 0px auto auto;
+}
+
+.ip-button :hover {
+  background-color: red;
 }

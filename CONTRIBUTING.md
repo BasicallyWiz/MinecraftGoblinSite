@@ -157,3 +157,61 @@ After having these two files made, rendered they form:
 ```
 
 </details>
+
+## Blog (News) System
+The blog system is currently in the works. It will support Issues that embed articles.
+
+I plan to have a in-app builder for issues and articles, but I have not gotten that far yet.
+
+<details>
+<summary>Creation of Issues</summary>
+
+in `ZMS.Server\News\Issues`, Create a file with any name of your choosing. Avoid spaces and special characters.<br/>
+The file extension should be .json, as we do not have any text in issues.
+
+The file should look like this:
+```json
+{
+  "Title": "Cool Issue!",
+  "Thumbnail": "thumbnail-image.png",
+  "Description": "Wow! So Cool, I think?",
+  "Authors": [
+    324588568951390220
+  ],
+  "Published": "2010-06-02T11:59:23.0404006-07:00",
+  "Articles": [
+    "HydroThunder",
+    "Minecraft"
+  ],
+  "Path": "CoolIssue"
+}
+```
+- Title & Description: These are the title and description of the issue. They can have as many spaces and special characters as you want.
+- Thumbnail: This is a filename of an image in the `ZMS.Server\News\Media` folder.
+- Authors: This is a list of Discord IDs of the authors of the issue. This will be used to show the authors of articles.
+- Published: This is the date the issue was published. It must be in a Dotnet TimeDate compatible format.
+- Articles: This is a list of articles in this issue. List must contain filenames of articles, and will render in the same order of the list.
+- Path: This is the path of the issue. It must be the same as the title, but without the spaces or extension.
+
+</details>
+
+<details>
+<summary>Creation of Articles</summary>
+
+Articles are not much more complex than issues.<br/>
+Each article has two files, a `.md` file, and a `.md.json` file.<br/>
+The `.md` file is the actual article, and the `.md.json` file is the metadata for the article.<br/>
+
+```json
+{
+  "title": "Article Title",
+  "description": "So far, we're the same as an issue",
+  "thumbnail": "thumbnail.png",
+  "authors": [324588568951390220],
+  "published": "2020-12-20"
+}
+```
+
+The `.md` file, is a usual markdown file. No precaution is required, although this file and it's `.md.json` must have the exact same base name.
+
+</details>

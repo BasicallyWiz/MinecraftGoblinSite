@@ -1,0 +1,12 @@
+﻿<a class="post" href="@(NavMan.BaseUri)News/View?issue=@issue.Path.Split(".")[0]">
+  <div class="query-catcher">
+    <div class="thumb" style="background-image:url(@getIssueThumb(issue.Thumbnail))" />
+    <div class="content">
+      <h2>@issue.Title</h2>
+      <p>@issue.Description</p>
+    </div>
+    <div class="details">
+      <p class="dateposted">@issue.Published.ToLongDateString()</p>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,19 @@
+﻿@page "/Blog"
+
+<PageTitle>UGS News</PageTitle>
+<!--a href="/News/Manage">Manage</a-->
+<!--https://discord.com/api/oauth2/authorize?client_id=1117244850153213952&redirect_uri=https%3A%2F%2Flocalhost%3A7063%2FNews%2FManage&response_type=code&scope=identify-->
+
+<div class="title-bg">
+  <img class="title-img" src="/images/logo.png"/>
+</div>
+<div class="volumes">
+  @foreach (var issue in issues)
+  {
+    <ZMS.Client.Shared.News.IssueListing issue="issue"/>
+  }
+</div>
+
+<!--I've been told to use this page as a reference: https://originrealms.news/-->
+<!--TODO: Create a news database that involves volumes to use as posts, and articles within the volumes.-->
+<!--Volumes can have a calculated read time using a method described here: https://infusion.media/content-marketing/how-to-calculate-reading-time/-->
