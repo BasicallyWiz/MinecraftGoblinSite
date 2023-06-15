@@ -1,5 +1,5 @@
-#UMG (Formerly ZMS)
-Repo for the website of the Zombie Minecraft server, that we haven't actually got a name for yet.
+# UGS (Formerly ZMS)
+Repo for the website of the minecraf
 
 ## First Steps
 <details open>
