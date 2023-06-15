@@ -1,6 +1,8 @@
 # UGS (Formerly ZMS)
 Repo for the website of the minecraf
 
+[![.NET](https://github.com/BasicallyWiz/MinecraftGoblinSite/actions/workflows/dotnet.yml/badge.svg)](https://github.com/BasicallyWiz/MinecraftGoblinSite/actions/workflows/dotnet.yml)
+
 ## First Steps
 <details open>
 <summary>Setting up development (With Visual Studio)</summary>
